@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Solutions from './components/Solutions';
 import ProductsShowcase from './components/ProductsShowcase';
 import ProductModal from './components/ProductModal';
 import AdminProductModal from './components/AdminProductModal';
@@ -66,9 +65,6 @@ export default function App() {
       <main>
         {/* Hero Section */}
         <Hero />
-
-        {/* Solutions Section */}
-        <Solutions />
 
         {/* Digital Showcase / Products Section */}
         <ProductsShowcase
