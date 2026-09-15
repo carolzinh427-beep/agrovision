@@ -164,9 +164,9 @@ export const INITIAL_PRODUCTS: Product[] = [
     categoryLabel: 'Antenas & Receptores',
     brand: 'AgroVision MS',
     model: 'RTK Link Radio/4G',
-    mainImage: '/conector-chicote-01.png',
+    mainImage: '/modulo-correcao-rtk.png',
     gallery: [
-      '/conector-chicote-01.png',
+      '/modulo-correcao-rtk.png',
       'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80'
     ],
     shortDescription: 'Módulo de transmissão de correção centimétrica para máximo rendimento no plantio e sulcamento.',
