@@ -41,10 +41,10 @@ export const INITIAL_PRODUCTS: Product[] = [
     categoryLabel: 'Antenas & Receptores',
     brand: 'Agres',
     model: 'Agronave L1/L2',
-    mainImage: 'https://images.unsplash.com/photo-1586771107445-d3ca888129ff?auto=format&fit=crop&w=800&q=80',
+    mainImage: '/receptor-gnss-agronave.png',
     gallery: [
-      'https://images.unsplash.com/photo-1586771107445-d3ca888129ff?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=800&q=80'
+      '/receptor-gnss-agronave.png',
+      'https://images.unsplash.com/photo-1586771107445-d3ca888129ff?auto=format&fit=crop&w=800&q=80'
     ],
     shortDescription: 'Receptor GNSS multifrequência projetado para operações exigentes de mapeamento e orientação agrícola.',
     description: 'Antena e receptor GNSS integrados de alta sensibilidade para rastreamento de satélites GPS, GLONASS e Galileo, garantindo sinal estável e confiável em condições adversas.',
