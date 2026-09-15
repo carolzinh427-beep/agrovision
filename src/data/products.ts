@@ -163,10 +163,10 @@ export const INITIAL_PRODUCTS: Product[] = [
     categoryLabel: 'Antenas & Receptores',
     brand: 'AgroVision MS',
     model: 'RTK Link Radio/4G',
-    mainImage: 'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80',
+    mainImage: '/modulo-correcao-rtk.png',
     gallery: [
-      'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80'
+      '/modulo-correcao-rtk.png',
+      'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80'
     ],
     shortDescription: 'Módulo de transmissão de correção centimétrica para máximo rendimento no plantio e sulcamento.',
     description: 'Equipamento para recepção de sinais de alta precisão RTK/NTRIP via rádio UHF ou telefonia celular 4G, permitindo precisão de 2,5 cm de passada a passada.',

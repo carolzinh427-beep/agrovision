@@ -44,11 +44,11 @@ export default function ProductModal({ product, onClose }) {
             
             {/* Gallery Left Column */}
             <div className="md:col-span-6 space-y-3">
-              <div className="relative h-56 sm:h-64 bg-slate-100 border border-slate-300 overflow-hidden">
+              <div className="relative h-60 sm:h-72 bg-white border border-slate-300 overflow-hidden flex items-center justify-center p-3">
                 <img
                   src={activeImage}
                   alt={product.name}
-                  className="w-full h-full object-cover"
+                  className="max-h-full max-w-full object-contain object-center"
                 />
               </div>
 
@@ -59,11 +59,11 @@ export default function ProductModal({ product, onClose }) {
                     <button
                       key={i}
                       onClick={() => setActiveImage(img)}
-                      className={`w-14 h-14 border-2 transition-all flex-shrink-0 rounded-none ${
+                      className={`w-14 h-14 border-2 transition-all flex-shrink-0 rounded-none bg-white flex items-center justify-center p-1 ${
                         activeImage === img ? 'border-[#15803D]' : 'border-slate-300 opacity-70 hover:opacity-100'
                       }`}
                     >
-                      <img src={img} alt="" className="w-full h-full object-cover" />
+                      <img src={img} alt="" className="max-h-full max-w-full object-contain object-center" />
                     </button>
                   ))}
                 </div>

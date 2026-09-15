@@ -103,11 +103,11 @@ export default function ProductsShowcase({ products, onSelectProduct, onOpenAdmi
               >
                 <div>
                   {/* Image Container with Badges */}
-                  <div className="relative h-48 sm:h-52 bg-slate-100 border-b border-slate-200 overflow-hidden">
+                  <div className="relative h-52 sm:h-56 bg-white border-b border-slate-200 overflow-hidden flex items-center justify-center p-3">
                     <img
                       src={product.mainImage}
                       alt={product.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="max-h-full max-w-full object-contain object-center group-hover:scale-105 transition-transform duration-300"
                     />
 
                     {/* Brand Badge */}
