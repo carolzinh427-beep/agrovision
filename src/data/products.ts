@@ -133,10 +133,11 @@ export const INITIAL_PRODUCTS: Product[] = [
     categoryLabel: 'Peças & Acessórios',
     brand: 'AgroVision',
     model: 'Chicote Master Agres/Greco',
-    mainImage: '/kit-chicotes-conectores.png',
+    mainImage: '/conector-chicote-01.png',
     gallery: [
-      '/kit-chicotes-conectores.png',
-      'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80'
+      '/conector-chicote-01.png',
+      '/conector-chicote-02.png',
+      '/kit-chicotes-conectores.png'
     ],
     shortDescription: 'Chicotes blindados e adaptadores reforçados para instalações de GPS, Antenas e Pilotos Automáticos.',
     description: 'Conjunto de cabos de grau automotivo com proteção IP68 contra umidade e trepidação, garantindo sinal sem ruídos para monitores e receptores agrícolas.',
