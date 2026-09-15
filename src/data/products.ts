@@ -8,9 +8,9 @@ export const INITIAL_PRODUCTS: Product[] = [
     categoryLabel: 'Piloto Automático',
     brand: 'Agres',
     model: 'IsoView E-Drive',
-    mainImage: '/piloto-agres-isoview.png',
+    mainImage: '/modulo-correcao-rtk.png',
     gallery: [
-      '/piloto-agres-isoview.png',
+      '/modulo-correcao-rtk.png',
       'https://images.unsplash.com/photo-1595246140625-573b715d11dc?auto=format&fit=crop&w=800&q=80'
     ],
     shortDescription: 'Sistema de direcionamento automático elétrico de alta precisão para tratores, pulverizadores e colhedoras.',
@@ -103,9 +103,9 @@ export const INITIAL_PRODUCTS: Product[] = [
     categoryLabel: 'Sensores & Telemetria',
     brand: 'Greco Agro Tech',
     model: 'Kit Ponta de Cerca / GR500',
-    mainImage: '/kit-ponta-de-cerca-greco.png',
+    mainImage: '/piloto-agres-isoview.png',
     gallery: [
-      '/kit-ponta-de-cerca-greco.png',
+      '/piloto-agres-isoview.png',
       '/sensores-greco-gr500.png'
     ],
     shortDescription: 'Módulo de telemetria e diagnóstico eletrônico para monitoramento em tempo real de implementos agrícolas.',
@@ -133,8 +133,9 @@ export const INITIAL_PRODUCTS: Product[] = [
     categoryLabel: 'Peças & Acessórios',
     brand: 'AgroVision',
     model: 'Chicote Master Agres/Greco',
-    mainImage: '/conector-chicote-01.png',
+    mainImage: '/kit-ponta-de-cerca-greco.png',
     gallery: [
+      '/kit-ponta-de-cerca-greco.png',
       '/conector-chicote-01.png',
       '/conector-chicote-02.png',
       '/kit-chicotes-conectores.png'
@@ -164,9 +165,9 @@ export const INITIAL_PRODUCTS: Product[] = [
     categoryLabel: 'Antenas & Receptores',
     brand: 'AgroVision MS',
     model: 'RTK Link Radio/4G',
-    mainImage: '/modulo-correcao-rtk.png',
+    mainImage: '/conector-chicote-01.png',
     gallery: [
-      '/modulo-correcao-rtk.png',
+      '/conector-chicote-01.png',
       'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80'
     ],
     shortDescription: 'Módulo de transmissão de correção centimétrica para máximo rendimento no plantio e sulcamento.',

@@ -16,7 +16,7 @@ export default function Solutions() {
       title: 'PILOTO AUTOMÁTICO',
       description: 'Instalação e calibração de sistemas de direcionamento.',
       icon: Navigation,
-      image: '/piloto-agres-isoview.png',
+      image: '/modulo-correcao-rtk.png',
     },
     {
       number: '03',
@@ -37,14 +37,14 @@ export default function Solutions() {
       title: 'DIAGNÓSTICO ELETRÔNICO',
       description: 'Identificação de falhas em equipamentos e sistemas.',
       icon: Zap,
-      image: '/kit-ponta-de-cerca-greco.png',
+      image: '/piloto-agres-isoview.png',
     },
     {
       number: '06',
       title: 'MÓDULO DE CORREÇÃO DE SINAL',
       description: 'Configuração, manutenção e suporte para correções de alta precisão (RTK / GNSS).',
       icon: Signal,
-      image: '/modulo-correcao-rtk.png',
+      image: '/conector-chicote-01.png',
     },
   ];
 
