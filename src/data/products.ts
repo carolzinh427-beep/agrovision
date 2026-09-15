@@ -8,9 +8,9 @@ export const INITIAL_PRODUCTS: Product[] = [
     categoryLabel: 'Piloto Automático',
     brand: 'Agres',
     model: 'IsoView E-Drive',
-    mainImage: '/modulo-correcao-rtk.png',
+    mainImage: '/piloto-agres-isoview.png',
     gallery: [
-      '/modulo-correcao-rtk.png',
+      '/piloto-agres-isoview.png',
       'https://images.unsplash.com/photo-1595246140625-573b715d11dc?auto=format&fit=crop&w=800&q=80'
     ],
     shortDescription: 'Sistema de direcionamento automático elétrico de alta precisão para tratores, pulverizadores e colhedoras.',
