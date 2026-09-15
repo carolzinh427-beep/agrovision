@@ -21,7 +21,15 @@ export default function App() {
     const saved = localStorage.getItem('agrovision_catalog');
     if (saved) {
       try {
-        return JSON.parse(saved);
+        const parsed = JSON.parse(saved);
+        // Ensure initial products maintain updated image references
+        return INITIAL_PRODUCTS.map((initProd) => {
+          const match = parsed.find((p) => p.id === initProd.id);
+          if (match && match.mainImage && !match.mainImage.startsWith('/')) {
+            return { ...match, mainImage: initProd.mainImage, gallery: initProd.gallery };
+          }
+          return match || initProd;
+        });
       } catch (e) {
         return INITIAL_PRODUCTS;
       }

@@ -8,10 +8,10 @@ export const INITIAL_PRODUCTS: Product[] = [
     categoryLabel: 'Piloto Automático',
     brand: 'Agres',
     model: 'IsoView E-Drive',
-    mainImage: 'https://images.unsplash.com/photo-1595246140625-573b715d11dc?auto=format&fit=crop&w=800&q=80',
+    mainImage: '/piloto-agres-isoview.png',
     gallery: [
-      'https://images.unsplash.com/photo-1595246140625-573b715d11dc?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=800&q=80'
+      '/piloto-agres-isoview.png',
+      'https://images.unsplash.com/photo-1595246140625-573b715d11dc?auto=format&fit=crop&w=800&q=80'
     ],
     shortDescription: 'Sistema de direcionamento automático elétrico de alta precisão para tratores, pulverizadores e colhedoras.',
     description: 'O Piloto Automático Elétrico IsoView da Agres proporciona extrema precisão nas operações no campo, reduzindo o amassamento da cultura, otimizando o tempo de trabalho e diminuindo a fadiga do operador.',
