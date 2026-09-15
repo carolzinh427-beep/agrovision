@@ -27,53 +27,53 @@ export default function Benefits() {
   ];
 
   return (
-    <section className="py-10 sm:py-16 md:py-20 bg-[#0A0E17] relative border-b border-slate-800/80">
+    <section className="py-12 sm:py-16 md:py-20 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Title */}
-        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 space-y-2">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#00E676]/10 text-[#00E676] text-xs font-bold uppercase tracking-wider">
-            Pilares da Tecnologia AgroVision
-          </div>
-          <h2 className="text-xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight font-['Outfit']">
+        {/* Section Title (Without top tag) */}
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14 space-y-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight font-['Outfit']">
             Resultados reais para a sua lavoura
           </h2>
+          <p className="text-slate-600 text-sm sm:text-base">
+            Os três pilares de desempenho da AgroVision MS para a sua operação.
+          </p>
         </div>
 
-        {/* 3 Pillars Grid */}
+        {/* 3 Pillars Square Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
           {pillars.map((pillar, idx) => {
             const IconComp = pillar.icon;
             return (
               <div
                 key={idx}
-                className="glass-panel p-5 sm:p-6 rounded-2xl border border-slate-800 hover:border-[#00E676]/50 transition-all duration-300 relative group flex flex-col justify-between"
+                className="bg-white p-6 border border-slate-200 hover:border-slate-400 transition-all duration-150 relative flex flex-col justify-between rounded-none shadow-xs group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-[#00E676]/10 border border-[#00E676]/30 flex items-center justify-center text-[#00E676] group-hover:scale-110 transition-transform">
+                    <div className="w-12 h-12 bg-slate-100 border border-slate-200 flex items-center justify-center text-[#15803D]">
                       <IconComp className="w-6 h-6" />
                     </div>
-                    <span className="text-[10px] font-bold text-[#00E676] uppercase tracking-wider px-2 py-0.5 rounded bg-[#00E676]/10 border border-[#00E676]/20">
+                    <span className="text-[10px] font-bold text-slate-700 uppercase tracking-wider px-2 py-1 bg-slate-100 border border-slate-200 rounded-none">
                       {pillar.tag}
                     </span>
                   </div>
 
-                  <h3 className="text-lg font-extrabold text-white font-['Outfit'] mb-1 group-hover:text-[#00E676] transition-colors">
+                  <h3 className="text-lg font-extrabold text-slate-900 font-['Outfit'] mb-1 group-hover:text-[#15803D] transition-colors">
                     {pillar.title}
                   </h3>
 
-                  <p className="text-[#00E676] text-xs font-bold mb-2">
+                  <p className="text-[#15803D] text-xs font-bold mb-3">
                     "{pillar.highlight}"
                   </p>
 
-                  <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
                     {pillar.description}
                   </p>
                 </div>
 
-                <div className="mt-4 pt-3 border-t border-slate-800/80 flex items-center gap-2 text-[11px] text-slate-400">
-                  <ShieldCheck className="w-4 h-4 text-[#00E676]" />
+                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center gap-2 text-xs text-slate-500 font-medium">
+                  <ShieldCheck className="w-4 h-4 text-[#15803D]" />
                   <span>Garantia de Desempenho AgroVision</span>
                 </div>
               </div>

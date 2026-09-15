@@ -1,57 +1,46 @@
 @import "tailwindcss";
 
 :root {
-  --color-brand-green: #00E676;
-  --color-brand-green-dark: #00C853;
-  --color-brand-navy: #0B192C;
+  --color-brand-green: #15803D;
+  --color-brand-green-hover: #166534;
+  --color-brand-navy: #0F172A;
   --color-brand-navy-light: #1E293B;
-  --color-bg-dark: #0A0E17;
-  --color-bg-card: #121824;
-  --color-bg-card-hover: #1A2234;
-  --color-text-main: #F8FAFC;
-  --color-text-muted: #94A3B8;
+  --color-bg-light: #FFFFFF;
+  --color-bg-subtle: #F8FAFC;
+  --color-card-border: #E2E8F0;
+  --color-text-dark: #0F172A;
+  --color-text-muted: #475569;
   font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--color-bg-dark);
-  color: var(--color-text-main);
+  background-color: var(--color-bg-subtle);
+  color: var(--color-text-dark);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom Utilities for High Tech Precision Feel */
-.tech-grid-bg {
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 32px 32px;
+/* Institutional Clean Card Panels */
+.inst-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
 }
 
-.tech-glow-green {
-  box-shadow: 0 0 25px rgba(0, 230, 118, 0.25);
+.inst-card:hover {
+  border-color: #CBD5E1;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
 }
 
-.tech-border-glow {
-  border: 1px solid rgba(0, 230, 118, 0.3);
-  box-shadow: inset 0 0 15px rgba(0, 230, 118, 0.05);
-}
-
-.glass-panel {
-  background: rgba(18, 24, 36, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.glass-nav {
-  background: rgba(10, 14, 23, 0.9);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+.inst-nav {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid #E2E8F0;
 }
 
 /* Scrollbar customization */
@@ -60,70 +49,13 @@ body {
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #0A0E17;
+  background: #F1F5F9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1E293B;
-  border-radius: 4px;
+  background: #94A3B8;
+  border-radius: 0px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #00E676;
+  background: #15803D;
 }
 
-/* Mobile optimizations: Tight responsive padding & compact sizing */
-@media (max-width: 640px) {
-  .section-padding {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  .heading-hero {
-    font-size: 1.75rem;
-    line-height: 2.1rem;
-  }
-  .heading-section {
-    font-size: 1.35rem;
-    line-height: 1.7rem;
-  }
-  .card-padding {
-    padding: 1rem;
-  }
-}
-
-@media (min-width: 641px) {
-  .section-padding {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  .heading-hero {
-    font-size: 2.75rem;
-    line-height: 3.25rem;
-  }
-  .heading-section {
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
-  .card-padding {
-    padding: 1.5rem;
-  }
-}
-
-/* Pulse animation for WhatsApp button */
-@keyframes whatsapp-pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-  }
-}
-
-.animate-whatsapp-pulse {
-  animation: whatsapp-pulse 2s infinite;
-}

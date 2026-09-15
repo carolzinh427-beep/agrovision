@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, CheckCircle2, Shield } from 'lucide-react';
+import { Award, CheckCircle2 } from 'lucide-react';
 
 export default function Partnerships() {
   const partners = [
@@ -18,58 +18,55 @@ export default function Partnerships() {
   ];
 
   return (
-    <section id="parcerias" className="py-10 sm:py-16 md:py-20 bg-[#0A0E17] relative border-b border-slate-800">
+    <section id="parcerias" className="py-12 sm:py-16 md:py-20 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 space-y-2">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#00E676]/10 text-[#00E676] text-xs font-bold uppercase tracking-wider">
-            Marcas & Representação
-          </div>
-          <h2 className="text-xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight font-['Outfit']">
+        {/* Section Header (Without top tag) */}
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14 space-y-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight font-['Outfit']">
             Parcerias de revenda
           </h2>
-          <p className="text-slate-300 text-xs sm:text-base">
+          <p className="text-slate-600 text-sm sm:text-base">
             Representação e revenda de soluções em agricultura de precisão para Rio Brilhante e região.
           </p>
         </div>
 
-        {/* 2 Partner Cards */}
+        {/* 2 Partner Square Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 max-w-4xl mx-auto">
           {partners.map((partner, index) => (
             <div
               key={index}
-              className="glass-panel p-6 sm:p-8 rounded-2xl border border-slate-800 hover:border-[#00E676]/50 transition-all duration-300 flex flex-col justify-between group"
+              className="bg-white p-6 sm:p-8 border border-slate-200 hover:border-slate-400 transition-all duration-150 flex flex-col justify-between rounded-none shadow-xs group"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-[#00E676] font-mono font-bold text-xs flex items-center gap-1.5">
-                    <Award className="w-4 h-4 text-[#00E676]" />
+                  <div className="px-3 py-1 bg-slate-100 border border-slate-300 text-slate-800 font-bold text-xs flex items-center gap-1.5 rounded-none">
+                    <Award className="w-4 h-4 text-[#15803D]" />
                     <span>{partner.badge}</span>
                   </div>
-                  <CheckCircle2 className="w-5 h-5 text-[#00E676]" />
+                  <CheckCircle2 className="w-5 h-5 text-[#15803D]" />
                 </div>
 
-                <h3 className="text-lg sm:text-xl font-extrabold text-white font-['Outfit'] mb-1 group-hover:text-[#00E676] transition-colors">
+                <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 font-['Outfit'] mb-1 group-hover:text-[#15803D] transition-colors">
                   {partner.name}
                 </h3>
 
-                <p className="text-[#00E676] text-xs font-semibold mb-3">
+                <p className="text-[#15803D] text-xs font-bold mb-3">
                   {partner.tagline}
                 </p>
 
-                <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
                   {partner.description}
                 </p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
-                <span className="text-slate-400">Atendimento Rio Brilhante e Região</span>
+              <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+                <span className="text-slate-500 font-semibold">Atendimento Rio Brilhante e Região</span>
                 <a
                   href="https://wa.me/5567991776857"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#00E676] font-bold hover:underline"
+                  className="text-[#15803D] font-bold hover:underline"
                 >
                   Consultar Linha &rarr;
                 </a>

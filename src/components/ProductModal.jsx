@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, MessageCircle, CheckCircle2, Shield, Wrench, ChevronRight } from 'lucide-react';
+import { X, MessageCircle, CheckCircle2, Shield, Wrench } from 'lucide-react';
 
 export default function ProductModal({ product, onClose }) {
   if (!product) return null;
@@ -12,25 +12,25 @@ export default function ProductModal({ product, onClose }) {
   const whatsappUrl = `https://wa.me/5567991776857?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/80 backdrop-blur-md overflow-y-auto animate-fadeIn">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-900/60 backdrop-blur-xs overflow-y-auto animate-fadeIn">
       
-      {/* Modal Container */}
-      <div className="relative w-full max-w-3xl glass-panel bg-[#0E1420] rounded-2xl border border-slate-700/80 shadow-2xl overflow-hidden my-auto max-h-[92vh] flex flex-col">
+      {/* Modal Square Dialog Container */}
+      <div className="relative w-full max-w-3xl bg-white rounded-none border border-slate-300 shadow-2xl overflow-hidden my-auto max-h-[92vh] flex flex-col">
         
         {/* Top Header Bar */}
-        <div className="flex items-center justify-between p-4 sm:p-5 border-b border-slate-800 bg-slate-900/80">
+        <div className="flex items-center justify-between p-4 sm:p-5 border-b border-slate-200 bg-slate-50">
           <div className="flex items-center gap-2">
-            <span className="text-xs px-2.5 py-1 rounded-md bg-[#00E676]/10 text-[#00E676] font-bold uppercase tracking-wider border border-[#00E676]/20">
+            <span className="text-xs px-2.5 py-1 bg-[#15803D] text-white font-bold uppercase rounded-none">
               {product.categoryLabel}
             </span>
-            <span className="text-xs text-slate-400 font-mono">
+            <span className="text-xs text-slate-600 font-semibold">
               {product.brand} {product.model}
             </span>
           </div>
 
           <button
             onClick={onClose}
-            className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+            className="p-1.5 text-slate-500 hover:text-slate-900 hover:bg-slate-200 transition-colors rounded-none border border-slate-300"
             aria-label="Fechar"
           >
             <X className="w-5 h-5" />
@@ -44,7 +44,7 @@ export default function ProductModal({ product, onClose }) {
             
             {/* Gallery Left Column */}
             <div className="md:col-span-6 space-y-3">
-              <div className="relative h-56 sm:h-64 rounded-xl overflow-hidden bg-slate-950 border border-slate-800">
+              <div className="relative h-56 sm:h-64 bg-slate-100 border border-slate-300 overflow-hidden">
                 <img
                   src={activeImage}
                   alt={product.name}
@@ -59,8 +59,8 @@ export default function ProductModal({ product, onClose }) {
                     <button
                       key={i}
                       onClick={() => setActiveImage(img)}
-                      className={`w-14 h-14 rounded-lg overflow-hidden border-2 transition-all flex-shrink-0 ${
-                        activeImage === img ? 'border-[#00E676] scale-95' : 'border-slate-800 opacity-60 hover:opacity-100'
+                      className={`w-14 h-14 border-2 transition-all flex-shrink-0 rounded-none ${
+                        activeImage === img ? 'border-[#15803D]' : 'border-slate-300 opacity-70 hover:opacity-100'
                       }`}
                     >
                       <img src={img} alt="" className="w-full h-full object-cover" />
@@ -73,50 +73,50 @@ export default function ProductModal({ product, onClose }) {
             {/* Info Right Column */}
             <div className="md:col-span-6 space-y-4">
               <div>
-                <div className="flex items-center gap-2 text-xs text-slate-400 mb-1">
-                  <span>Marca: <strong className="text-slate-200">{product.brand}</strong></span>
+                <div className="flex items-center gap-2 text-xs text-slate-500 mb-1">
+                  <span>Marca: <strong className="text-slate-900">{product.brand}</strong></span>
                   <span>•</span>
-                  <span>Modelo: <strong className="text-slate-200">{product.model}</strong></span>
+                  <span>Modelo: <strong className="text-slate-900">{product.model}</strong></span>
                 </div>
-                <h2 className="text-xl sm:text-2xl font-extrabold text-white font-['Outfit']">
+                <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 font-['Outfit']">
                   {product.name}
                 </h2>
               </div>
 
               {/* Status & Price Row */}
-              <div className="p-3 rounded-xl bg-slate-900/90 border border-slate-800 flex items-center justify-between">
+              <div className="p-3 bg-slate-50 border border-slate-200 flex items-center justify-between rounded-none">
                 <div>
-                  <span className="block text-[11px] text-slate-400 font-medium">Condição Comercial</span>
-                  <span className="text-base sm:text-lg font-extrabold text-[#00E676]">
+                  <span className="block text-[11px] text-slate-500 font-semibold uppercase">Condição Comercial</span>
+                  <span className="text-base sm:text-lg font-extrabold text-slate-900">
                     {product.price ? product.price : 'Consulte condições'}
                   </span>
                 </div>
 
                 <div className="text-right">
-                  <span className="block text-[11px] text-slate-400 font-medium">Disponibilidade</span>
-                  <span className="inline-flex items-center gap-1 text-xs font-semibold text-emerald-400">
+                  <span className="block text-[11px] text-slate-500 font-semibold uppercase">Disponibilidade</span>
+                  <span className="inline-flex items-center gap-1 text-xs font-bold text-[#15803D]">
                     <CheckCircle2 className="w-3.5 h-3.5" />
                     {product.availability}
                   </span>
                 </div>
               </div>
 
-              {/* Short Description */}
-              <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+              {/* Description */}
+              <p className="text-slate-700 text-xs sm:text-sm leading-relaxed">
                 {product.description}
               </p>
 
               {/* Applications List */}
               {product.applications && product.applications.length > 0 && (
                 <div className="space-y-1.5">
-                  <span className="text-xs font-bold text-slate-300 uppercase tracking-wider block">
+                  <span className="text-xs font-bold text-slate-900 uppercase tracking-wider block">
                     Aplicações Principais no Campo:
                   </span>
                   <div className="flex flex-wrap gap-1.5">
                     {product.applications.map((app, index) => (
                       <span
                         key={index}
-                        className="px-2.5 py-1 rounded-md bg-slate-800 text-slate-200 text-xs border border-slate-700"
+                        className="px-2.5 py-1 bg-slate-100 text-slate-800 text-xs border border-slate-300 rounded-none font-medium"
                       >
                         ✓ {app}
                       </span>
@@ -129,33 +129,33 @@ export default function ProductModal({ product, onClose }) {
           </div>
 
           {/* Technical Specifications Section */}
-          <div className="pt-4 border-t border-slate-800 space-y-3">
-            <h3 className="text-sm font-bold text-white uppercase tracking-wider font-['Outfit'] flex items-center gap-2">
-              <Wrench className="w-4 h-4 text-[#00E676]" />
+          <div className="pt-4 border-t border-slate-200 space-y-3">
+            <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider font-['Outfit'] flex items-center gap-2">
+              <Wrench className="w-4 h-4 text-[#15803D]" />
               Especificações Técnicas
             </h3>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
               {product.specifications.map((spec, i) => (
-                <div key={i} className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/80 flex justify-between gap-2">
-                  <span className="text-slate-400">{spec.label}</span>
-                  <span className="font-semibold text-slate-100 text-right">{spec.value}</span>
+                <div key={i} className="p-2.5 bg-slate-50 border border-slate-200 flex justify-between gap-2 rounded-none">
+                  <span className="text-slate-600 font-medium">{spec.label}</span>
+                  <span className="font-bold text-slate-900 text-right">{spec.value}</span>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Support Guarantee Tag */}
-          <div className="p-3 rounded-xl bg-[#00E676]/5 border border-[#00E676]/20 flex items-center gap-3 text-xs text-slate-300">
-            <Shield className="w-5 h-5 text-[#00E676] flex-shrink-0" />
+          <div className="p-3 bg-[#15803D]/10 border border-[#15803D]/30 flex items-center gap-3 text-xs text-slate-800 rounded-none">
+            <Shield className="w-5 h-5 text-[#15803D] flex-shrink-0" />
             <span>Suporte técnico, instalação e configuração garantidos pela equipe AgroVision MS em Rio Brilhante e região.</span>
           </div>
 
         </div>
 
-        {/* Footer Bar with WhatsApp Call to Action */}
-        <div className="p-4 border-t border-slate-800 bg-slate-900/90 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <div className="text-center sm:text-left text-xs text-slate-400">
+        {/* Footer Bar with Square WhatsApp Button */}
+        <div className="p-4 border-t border-slate-200 bg-slate-50 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div className="text-center sm:text-left text-xs text-slate-600 font-medium">
             Dúvidas sobre compatibilidade com seu maquinário?
           </div>
 
@@ -163,9 +163,9 @@ export default function ProductModal({ product, onClose }) {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#00E676] hover:bg-[#00C853] text-slate-950 font-extrabold px-6 py-3 rounded-xl text-sm transition-all shadow-lg shadow-[#00E676]/20"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#15803D] hover:bg-[#166534] text-white font-bold px-6 py-3 rounded-none text-sm transition-all shadow-xs border border-[#15803D]"
           >
-            <MessageCircle className="w-4 h-4 fill-slate-950" />
+            <MessageCircle className="w-4 h-4 fill-white" />
             <span>Solicitar Orçamento no WhatsApp</span>
           </a>
         </div>

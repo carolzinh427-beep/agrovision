@@ -47,7 +47,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0A0E17] text-slate-100 font-sans selection:bg-[#00E676] selection:text-black">
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-[#15803D] selection:text-white">
       {/* Header */}
       <Header />
 

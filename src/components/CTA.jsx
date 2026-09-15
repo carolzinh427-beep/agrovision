@@ -1,25 +1,17 @@
 import React from 'react';
-import { MessageCircle, ArrowRight, ShieldCheck, Cpu } from 'lucide-react';
+import { MessageCircle, ArrowRight, ShieldCheck } from 'lucide-react';
 
 export default function CTA() {
   return (
-    <section className="py-12 sm:py-16 md:py-20 bg-[#0A0E17] relative overflow-hidden">
-      {/* Background Accent Glows */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#00E676]/10 rounded-full blur-[120px] pointer-events-none" />
-
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="glass-panel p-6 sm:p-10 md:p-12 rounded-3xl border border-[#00E676]/40 text-center space-y-6 bg-gradient-to-b from-[#0E1420] via-[#0B121E] to-[#0A0E17] shadow-2xl">
+    <section className="py-12 sm:py-16 md:py-20 bg-slate-100 border-b border-slate-200">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-white p-8 sm:p-12 border border-slate-300 text-center space-y-6 rounded-none shadow-xs">
           
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#00E676]/10 border border-[#00E676]/30 text-[#00E676] text-xs font-bold uppercase tracking-wider">
-            <Cpu className="w-3.5 h-3.5" />
-            <span>Transforme sua Lavoura</span>
-          </div>
-
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight font-['Outfit'] max-w-2xl mx-auto">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-['Outfit'] max-w-2xl mx-auto">
             Leve mais precisão para o seu campo.
           </h2>
 
-          <p className="text-slate-300 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+          <p className="text-slate-600 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
             Fale com a AgroVision MS e encontre a tecnologia ideal para sua operação.
           </p>
 
@@ -28,25 +20,25 @@ export default function CTA() {
               href="https://wa.me/5567991776857?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20especialista%20da%20AgroVision%20MS."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 bg-[#00E676] hover:bg-[#00C853] text-slate-950 font-extrabold px-8 py-4 rounded-xl text-sm sm:text-base transition-all duration-300 shadow-xl shadow-[#00E676]/30 hover:shadow-[#00E676]/50 hover:-translate-y-0.5 active:translate-y-0"
+              className="inline-flex items-center justify-center gap-3 bg-[#15803D] hover:bg-[#166534] text-white font-bold px-8 py-4 rounded-none text-sm sm:text-base transition-all duration-150 border border-[#15803D] shadow-xs"
             >
-              <MessageCircle className="w-5 h-5 fill-slate-950" />
+              <MessageCircle className="w-5 h-5 fill-white" />
               <span>Falar com especialista</span>
-              <ArrowRight className="w-4 h-4 text-slate-950" />
+              <ArrowRight className="w-4 h-4 text-white" />
             </a>
           </div>
 
-          <div className="pt-4 border-t border-slate-800/80 flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs text-slate-400">
+          <div className="pt-4 border-t border-slate-200 flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs text-slate-600 font-semibold">
             <span className="flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-[#00E676]" />
+              <ShieldCheck className="w-4 h-4 text-[#15803D]" />
               Atendimento via WhatsApp
             </span>
             <span className="flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-[#00E676]" />
+              <ShieldCheck className="w-4 h-4 text-[#15803D]" />
               Rio Brilhante e Região — MS
             </span>
             <span className="flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-[#00E676]" />
+              <ShieldCheck className="w-4 h-4 text-[#15803D]" />
               Suporte em Campo
             </span>
           </div>

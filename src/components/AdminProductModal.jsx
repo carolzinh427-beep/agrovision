@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { X, Plus, Save, Download, RefreshCw, Trash2, Edit3, Image as ImageIcon } from 'lucide-react';
+import { X, Plus, Save, Download } from 'lucide-react';
 
 export default function AdminProductModal({ products, onAddProduct, onUpdateProduct, onClose }) {
-  const [activeTab, setActiveTab] = useState('list'); // 'list' or 'new'
+  const [activeTab, setActiveTab] = useState('list');
   
-  // Form State for New Product
   const [formData, setFormData] = useState({
     name: '',
     category: 'piloto',
@@ -88,51 +87,51 @@ export default function AdminProductModal({ products, onAddProduct, onUpdateProd
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/85 backdrop-blur-md overflow-y-auto animate-fadeIn">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-900/60 backdrop-blur-xs overflow-y-auto animate-fadeIn">
       
-      <div className="relative w-full max-w-4xl glass-panel bg-[#0E1420] rounded-2xl border border-slate-700 shadow-2xl overflow-hidden my-auto max-h-[92vh] flex flex-col">
+      <div className="relative w-full max-w-4xl bg-white border border-slate-300 shadow-2xl overflow-hidden my-auto max-h-[92vh] flex flex-col rounded-none">
         
         {/* Modal Header */}
-        <div className="p-4 sm:p-5 border-b border-slate-800 bg-slate-900 flex items-center justify-between">
+        <div className="p-4 sm:p-5 border-b border-slate-200 bg-slate-50 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <span className="p-2 rounded-xl bg-[#00E676]/10 text-[#00E676] font-bold text-xs border border-[#00E676]/30">
+            <span className="px-2.5 py-1 bg-slate-900 text-white font-bold text-xs rounded-none">
               ADMIN
             </span>
             <div>
-              <h3 className="text-base sm:text-lg font-bold text-white font-['Outfit']">
+              <h3 className="text-base sm:text-lg font-bold text-slate-900 font-['Outfit']">
                 Gerenciador do Catálogo de Produtos
               </h3>
-              <p className="text-xs text-slate-400">Cadastre e atualize os equipamentos em tempo real</p>
+              <p className="text-xs text-slate-500">Cadastre e atualize os equipamentos em tempo real</p>
             </div>
           </div>
 
           <button
             onClick={onClose}
-            className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+            className="p-1.5 text-slate-500 hover:text-slate-900 hover:bg-slate-200 border border-slate-300 rounded-none transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Tab Selection */}
-        <div className="flex items-center justify-between px-4 pt-3 bg-slate-900/60 border-b border-slate-800">
+        <div className="flex items-center justify-between px-4 pt-3 bg-slate-100 border-b border-slate-200">
           <div className="flex gap-2">
             <button
               onClick={() => setActiveTab('list')}
-              className={`px-4 py-2 text-xs font-bold rounded-t-xl transition-colors border-t border-x ${
+              className={`px-4 py-2 text-xs font-bold transition-colors border-t border-x rounded-none ${
                 activeTab === 'list'
-                  ? 'bg-[#0E1420] text-[#00E676] border-slate-700'
-                  : 'text-slate-400 border-transparent hover:text-slate-200'
+                  ? 'bg-white text-[#15803D] border-slate-300'
+                  : 'text-slate-600 border-transparent hover:text-slate-900'
               }`}
             >
               Lista de Equipamentos ({products.length})
             </button>
             <button
               onClick={() => setActiveTab('new')}
-              className={`px-4 py-2 text-xs font-bold rounded-t-xl transition-colors border-t border-x flex items-center gap-1.5 ${
+              className={`px-4 py-2 text-xs font-bold transition-colors border-t border-x rounded-none flex items-center gap-1.5 ${
                 activeTab === 'new'
-                  ? 'bg-[#0E1420] text-[#00E676] border-slate-700'
-                  : 'text-slate-400 border-transparent hover:text-slate-200'
+                  ? 'bg-white text-[#15803D] border-slate-300'
+                  : 'text-slate-600 border-transparent hover:text-slate-900'
               }`}
             >
               <Plus className="w-3.5 h-3.5" />
@@ -142,26 +141,26 @@ export default function AdminProductModal({ products, onAddProduct, onUpdateProd
 
           <button
             onClick={exportJSON}
-            className="text-xs text-[#00E676] hover:underline flex items-center gap-1 font-semibold pb-2"
+            className="text-xs text-[#15803D] hover:underline flex items-center gap-1 font-bold pb-2"
           >
             <Download className="w-3.5 h-3.5" />
-            <span>Exportar JSON do Catálogo</span>
+            <span>Exportar JSON</span>
           </button>
         </div>
 
         {/* Modal Body */}
-        <div className="p-4 sm:p-6 overflow-y-auto flex-1 space-y-4">
+        <div className="p-4 sm:p-6 overflow-y-auto flex-1 space-y-4 bg-white">
           
           {activeTab === 'list' ? (
-            <div className="space-y-3">
+            <div className="space-y-2.5">
               {products.map((p) => (
-                <div key={p.id} className="p-3 sm:p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center justify-between gap-3 text-xs">
+                <div key={p.id} className="p-3 sm:p-4 bg-slate-50 border border-slate-200 flex items-center justify-between gap-3 text-xs rounded-none">
                   <div className="flex items-center gap-3">
-                    <img src={p.mainImage} alt="" className="w-12 h-12 rounded-lg object-cover bg-slate-950 flex-shrink-0" />
+                    <img src={p.mainImage} alt="" className="w-12 h-12 border border-slate-300 object-cover bg-slate-200 flex-shrink-0" />
                     <div>
-                      <span className="text-[10px] text-[#00E676] font-bold uppercase">{p.categoryLabel}</span>
-                      <h4 className="font-bold text-white text-sm">{p.name}</h4>
-                      <p className="text-slate-400">{p.brand} - {p.model} | <span className="text-slate-300">{p.price || 'Consulte condições'}</span></p>
+                      <span className="text-[10px] text-[#15803D] font-bold uppercase">{p.categoryLabel}</span>
+                      <h4 className="font-bold text-slate-900 text-sm">{p.name}</h4>
+                      <p className="text-slate-500">{p.brand} - {p.model} | <span className="text-slate-800 font-semibold">{p.price || 'Consulte condições'}</span></p>
                     </div>
                   </div>
 
@@ -171,10 +170,10 @@ export default function AdminProductModal({ products, onAddProduct, onUpdateProd
                         const newStatus = p.status === 'ativo' ? 'inativo' : 'ativo';
                         onUpdateProduct(p.id, { status: newStatus });
                       }}
-                      className={`px-2.5 py-1 rounded-md text-[10px] font-bold border ${
+                      className={`px-3 py-1 text-[10px] font-bold border rounded-none ${
                         p.status === 'ativo'
-                          ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30'
-                          : 'bg-rose-500/10 text-rose-400 border-rose-500/30'
+                          ? 'bg-emerald-50 text-emerald-800 border-emerald-300'
+                          : 'bg-rose-50 text-rose-800 border-rose-300'
                       }`}
                     >
                       {p.status === 'ativo' ? 'Ativo' : 'Inativo'}
@@ -187,23 +186,23 @@ export default function AdminProductModal({ products, onAddProduct, onUpdateProd
             <form onSubmit={handleSubmit} className="space-y-4 text-xs">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-slate-300 font-semibold mb-1">Nome do Equipamento *</label>
+                  <label className="block text-slate-700 font-semibold mb-1">Nome do Equipamento *</label>
                   <input
                     type="text"
                     required
                     placeholder="Ex: Monitor de Guiamento GPS"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full bg-slate-900 text-slate-100 p-2.5 rounded-xl border border-slate-800 focus:border-[#00E676] focus:outline-none"
+                    className="w-full bg-white text-slate-900 p-2.5 border border-slate-300 focus:border-[#15803D] focus:outline-none rounded-none"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-slate-300 font-semibold mb-1">Categoria *</label>
+                  <label className="block text-slate-700 font-semibold mb-1">Categoria *</label>
                   <select
                     value={formData.category}
                     onChange={handleCategoryChange}
-                    className="w-full bg-slate-900 text-slate-100 p-2.5 rounded-xl border border-slate-800 focus:border-[#00E676] focus:outline-none"
+                    className="w-full bg-white text-slate-900 p-2.5 border border-slate-300 focus:border-[#15803D] focus:outline-none rounded-none"
                   >
                     {categoryOptions.map(c => (
                       <option key={c.value} value={c.value}>{c.label}</option>
@@ -212,45 +211,45 @@ export default function AdminProductModal({ products, onAddProduct, onUpdateProd
                 </div>
 
                 <div>
-                  <label className="block text-slate-300 font-semibold mb-1">Marca *</label>
+                  <label className="block text-slate-700 font-semibold mb-1">Marca *</label>
                   <input
                     type="text"
                     required
                     placeholder="Ex: Agres ou Greco Agro Tech"
                     value={formData.brand}
                     onChange={(e) => setFormData({ ...formData, brand: e.target.value })}
-                    className="w-full bg-slate-900 text-slate-100 p-2.5 rounded-xl border border-slate-800 focus:border-[#00E676] focus:outline-none"
+                    className="w-full bg-white text-slate-900 p-2.5 border border-slate-300 focus:border-[#15803D] focus:outline-none rounded-none"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-slate-300 font-semibold mb-1">Modelo</label>
+                  <label className="block text-slate-700 font-semibold mb-1">Modelo</label>
                   <input
                     type="text"
                     placeholder="Ex: IsoView 700"
                     value={formData.model}
                     onChange={(e) => setFormData({ ...formData, model: e.target.value })}
-                    className="w-full bg-slate-900 text-slate-100 p-2.5 rounded-xl border border-slate-800 focus:border-[#00E676] focus:outline-none"
+                    className="w-full bg-white text-slate-900 p-2.5 border border-slate-300 focus:border-[#15803D] focus:outline-none rounded-none"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-slate-300 font-semibold mb-1">Preço (deixe em branco para "Consulte condições")</label>
+                  <label className="block text-slate-700 font-semibold mb-1">Preço (deixe em branco para "Consulte condições")</label>
                   <input
                     type="text"
                     placeholder="Ex: R$ 12.500,00 ou deixe em branco"
                     value={formData.price}
                     onChange={(e) => setFormData({ ...formData, price: e.target.value })}
-                    className="w-full bg-slate-900 text-slate-100 p-2.5 rounded-xl border border-slate-800 focus:border-[#00E676] focus:outline-none"
+                    className="w-full bg-white text-slate-900 p-2.5 border border-slate-300 focus:border-[#15803D] focus:outline-none rounded-none"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-slate-300 font-semibold mb-1">Disponibilidade</label>
+                  <label className="block text-slate-700 font-semibold mb-1">Disponibilidade</label>
                   <select
                     value={formData.availability}
                     onChange={(e) => setFormData({ ...formData, availability: e.target.value })}
-                    className="w-full bg-slate-900 text-slate-100 p-2.5 rounded-xl border border-slate-800 focus:border-[#00E676] focus:outline-none"
+                    className="w-full bg-white text-slate-900 p-2.5 border border-slate-300 focus:border-[#15803D] focus:outline-none rounded-none"
                   >
                     <option value="Disponível">Disponível</option>
                     <option value="Sob Consulta">Sob Consulta</option>
@@ -260,31 +259,31 @@ export default function AdminProductModal({ products, onAddProduct, onUpdateProd
               </div>
 
               <div>
-                <label className="block text-slate-300 font-semibold mb-1">URL da Imagem Principal (Real do produto)</label>
+                <label className="block text-slate-700 font-semibold mb-1">URL da Imagem Principal</label>
                 <input
                   type="text"
                   placeholder="https://sua-imagem.jpg"
                   value={formData.mainImage}
                   onChange={(e) => setFormData({ ...formData, mainImage: e.target.value })}
-                  className="w-full bg-slate-900 text-slate-100 p-2.5 rounded-xl border border-slate-800 focus:border-[#00E676] focus:outline-none"
+                  className="w-full bg-white text-slate-900 p-2.5 border border-slate-300 focus:border-[#15803D] focus:outline-none rounded-none"
                 />
               </div>
 
               <div>
-                <label className="block text-slate-300 font-semibold mb-1">Descrição Curta</label>
+                <label className="block text-slate-700 font-semibold mb-1">Descrição Curta</label>
                 <textarea
                   rows={2}
-                  placeholder="Resumo em 1 ou 2 frases do equipamento..."
+                  placeholder="Resumo do equipamento..."
                   value={formData.shortDescription}
                   onChange={(e) => setFormData({ ...formData, shortDescription: e.target.value })}
-                  className="w-full bg-slate-900 text-slate-100 p-2.5 rounded-xl border border-slate-800 focus:border-[#00E676] focus:outline-none"
+                  className="w-full bg-white text-slate-900 p-2.5 border border-slate-300 focus:border-[#15803D] focus:outline-none rounded-none"
                 />
               </div>
 
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 bg-[#00E676] hover:bg-[#00C853] text-slate-950 font-bold py-3 px-4 rounded-xl text-sm transition-all"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-[#15803D] hover:bg-[#166534] text-white font-bold py-3 px-4 rounded-none text-sm transition-all shadow-xs border border-[#15803D]"
                 >
                   <Save className="w-4 h-4" />
                   <span>Cadastrar Equipamento no Catálogo</span>

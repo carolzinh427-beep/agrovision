@@ -1,54 +1,52 @@
 import React from 'react';
-import { ShieldCheck, Cpu, Target, Award, MapPin } from 'lucide-react';
+import { ShieldCheck, Target, Award, MapPin } from 'lucide-react';
 
 export default function About() {
   return (
-    <section id="sobre" className="py-12 sm:py-16 md:py-20 bg-[#0A0E17] relative border-b border-slate-800/80 tech-grid-bg">
+    <section id="sobre" className="py-12 sm:py-16 md:py-20 bg-slate-50 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
-          {/* Left Column: Visual Brand Card */}
+          {/* Left Column: Visual Brand Card (Institutional Square Card) */}
           <div className="lg:col-span-5 relative">
-            <div className="glass-panel p-6 rounded-3xl border border-slate-800 space-y-6 relative overflow-hidden shadow-2xl">
-              <div className="absolute top-0 right-0 w-40 h-40 bg-[#00E676]/10 rounded-full blur-3xl pointer-events-none" />
-
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#00E676] to-[#009624] flex items-center justify-center text-black font-extrabold shadow-lg shadow-[#00E676]/20">
-                  <Cpu className="w-6 h-6 text-slate-950" />
+            <div className="bg-white p-6 sm:p-8 border border-slate-300 space-y-6 rounded-none shadow-xs">
+              <div className="flex items-center gap-3 border-b border-slate-200 pb-4">
+                <div className="w-10 h-10 bg-[#15803D] flex items-center justify-center text-white font-extrabold">
+                  <ShieldCheck className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-extrabold text-white font-['Outfit']">
-                    AgroVision <span className="text-[#00E676]">MS</span>
+                  <h3 className="text-xl font-extrabold text-slate-900 font-['Outfit']">
+                    AgroVision <span className="text-[#15803D]">MS</span>
                   </h3>
-                  <p className="text-xs text-slate-400">Agricultura de Precisão</p>
+                  <p className="text-xs text-slate-500 font-semibold uppercase">Agricultura de Precisão</p>
                 </div>
               </div>
 
-              <div className="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-2">
-                <span className="text-[10px] uppercase font-bold tracking-wider text-[#00E676]">Nossos Compromissos</span>
-                <ul className="space-y-2 text-xs text-slate-300">
+              <div className="space-y-3">
+                <span className="text-xs uppercase font-extrabold tracking-wider text-slate-900 block">Pilares de Confiabilidade</span>
+                <ul className="space-y-2.5 text-xs text-slate-700 font-medium">
                   <li className="flex items-center gap-2">
-                    <ShieldCheck className="w-4 h-4 text-[#00E676] flex-shrink-0" />
+                    <CheckIcon />
                     <span>Confiabilidade máxima nas operações agrícolas</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Target className="w-4 h-4 text-[#00E676] flex-shrink-0" />
-                    <span>Precisão milimétrica de passada a passada</span>
+                    <CheckIcon />
+                    <span>Precisão de passada a passada</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <Award className="w-4 h-4 text-[#00E676] flex-shrink-0" />
+                    <CheckIcon />
                     <span>Revenda oficial Agres e Greco Agro Tech</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <MapPin className="w-4 h-4 text-[#00E676] flex-shrink-0" />
-                    <span>Presença constante em Rio Brilhante e região — MS</span>
+                    <CheckIcon />
+                    <span>Atendimento presencial em Rio Brilhante e região — MS</span>
                   </li>
                 </ul>
               </div>
 
-              <div className="text-center pt-2">
-                <p className="text-xs italic text-slate-400 font-medium">
+              <div className="text-center pt-3 border-t border-slate-200">
+                <p className="text-xs italic text-slate-600 font-semibold">
                   "Tecnologia e precisão, guiando o futuro no campo."
                 </p>
               </div>
@@ -56,25 +54,21 @@ export default function About() {
           </div>
 
           {/* Right Column: Narrative & Positioning */}
-          <div className="lg:col-span-7 space-y-5">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#00E676]/10 text-[#00E676] text-xs font-bold uppercase tracking-wider border border-[#00E676]/20">
-              Sobre a Empresa
-            </div>
-
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight font-['Outfit']">
+          <div className="lg:col-span-7 space-y-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight font-['Outfit']">
               Soluções em agricultura de precisão para o agro do Mato Grosso do Sul
             </h2>
 
-            <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              A <strong className="text-white">AgroVision MS</strong> atua com a comercialização de equipamentos tecnológicos de ponta, instalação, configuração, diagnóstico eletrônico, reparos de precisão e acompanhamento técnico direto em campo.
+            <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
+              A <strong className="text-slate-900">AgroVision MS</strong> atua com a comercialização de equipamentos tecnológicos de ponta, instalação, configuração, diagnóstico eletrônico, reparos de precisão e acompanhamento técnico direto em campo.
             </p>
 
-            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+            <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
               Nosso foco é proporcionar aos produtores rurais de Rio Brilhante e região a tecnologia exata necessária para eliminar o desperdício de insumos, reduzir o tempo de máquina parada e obter o máximo rendimento em cada safra.
             </p>
 
-            <div className="p-4 rounded-xl bg-[#00E676]/5 border border-[#00E676]/20 text-xs text-slate-200">
-              <strong className="text-[#00E676] font-bold block mb-1">Mais eficiência, produtividade e confiabilidade para o seu campo.</strong>
+            <div className="p-4 bg-white border-l-4 border-[#15803D] border-t border-r border-b border-slate-200 text-xs text-slate-800 rounded-none shadow-xs">
+              <strong className="text-[#15803D] font-bold block mb-1">Mais eficiência, produtividade e confiabilidade para o seu campo.</strong>
               Não entregamos apenas equipamentos: entregamos o suporte contínuo para garantir que a sua operação funcione perfeitamente no momento decisivo da safra.
             </div>
           </div>
@@ -84,4 +78,8 @@ export default function About() {
       </div>
     </section>
   );
+}
+
+function CheckIcon() {
+  return <span className="text-[#15803D] font-bold">✓</span>;
 }
