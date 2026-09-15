@@ -98,15 +98,15 @@ export const INITIAL_PRODUCTS: Product[] = [
   },
   {
     id: 'prod-04',
-    name: 'Sistema de Sensores & Monitor GR500 Greco',
+    name: 'Sistema de Sensores Kit Ponta de Cerca Greco',
     category: 'sensores',
     categoryLabel: 'Sensores & Telemetria',
     brand: 'Greco Agro Tech',
-    model: 'Monitor de Fluxo GR500',
-    mainImage: '/sensores-greco-gr500.png',
+    model: 'Kit Ponta de Cerca / GR500',
+    mainImage: '/kit-ponta-de-cerca-greco.png',
     gallery: [
-      '/sensores-greco-gr500.png',
-      'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80'
+      '/kit-ponta-de-cerca-greco.png',
+      '/sensores-greco-gr500.png'
     ],
     shortDescription: 'Módulo de telemetria e diagnóstico eletrônico para monitoramento em tempo real de implementos agrícolas.',
     description: 'Solução da Greco Agro Tech para leitura contínua de sensores no maquinário, identificação prévia de falhas elétricas/hidráulicas e envio de diagnósticos em campo.',
