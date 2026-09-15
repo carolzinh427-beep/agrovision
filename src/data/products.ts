@@ -98,15 +98,15 @@ export const INITIAL_PRODUCTS: Product[] = [
   },
   {
     id: 'prod-04',
-    name: 'Sistema de Sensores Greco Agro Tech',
+    name: 'Sistema de Sensores & Monitor GR500 Greco',
     category: 'sensores',
     categoryLabel: 'Sensores & Telemetria',
     brand: 'Greco Agro Tech',
-    model: 'Greco Sensing Pod',
-    mainImage: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80',
+    model: 'Monitor de Fluxo GR500',
+    mainImage: '/sensores-greco-gr500.png',
     gallery: [
-      'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80'
+      '/sensores-greco-gr500.png',
+      'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80'
     ],
     shortDescription: 'Módulo de telemetria e diagnóstico eletrônico para monitoramento em tempo real de implementos agrícolas.',
     description: 'Solução da Greco Agro Tech para leitura contínua de sensores no maquinário, identificação prévia de falhas elétricas/hidráulicas e envio de diagnósticos em campo.',
