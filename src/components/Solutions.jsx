@@ -37,7 +37,7 @@ export default function Solutions() {
       title: 'DIAGNÓSTICO ELETRÔNICO',
       description: 'Identificação de falhas em equipamentos e sistemas.',
       icon: Zap,
-      image: '/piloto-agres-isoview.png',
+      image: '/kit-ponta-de-cerca-greco.png',
     },
     {
       number: '06',

@@ -103,9 +103,9 @@ export const INITIAL_PRODUCTS: Product[] = [
     categoryLabel: 'Sensores & Telemetria',
     brand: 'Greco Agro Tech',
     model: 'Kit Ponta de Cerca / GR500',
-    mainImage: '/piloto-agres-isoview.png',
+    mainImage: '/kit-ponta-de-cerca-greco.png',
     gallery: [
-      '/piloto-agres-isoview.png',
+      '/kit-ponta-de-cerca-greco.png',
       '/sensores-greco-gr500.png'
     ],
     shortDescription: 'Módulo de telemetria e diagnóstico eletrônico para monitoramento em tempo real de implementos agrícolas.',
@@ -133,13 +133,11 @@ export const INITIAL_PRODUCTS: Product[] = [
     categoryLabel: 'Peças & Acessórios',
     brand: 'AgroVision',
     model: 'Chicote Master Agres/Greco',
-    mainImage: '/sensores-greco-gr500.png',
+    mainImage: '/kit-chicotes-conectores.png',
     gallery: [
-      '/sensores-greco-gr500.png',
-      '/kit-ponta-de-cerca-greco.png',
+      '/kit-chicotes-conectores.png',
       '/conector-chicote-01.png',
-      '/conector-chicote-02.png',
-      '/kit-chicotes-conectores.png'
+      '/conector-chicote-02.png'
     ],
     shortDescription: 'Chicotes blindados e adaptadores reforçados para instalações de GPS, Antenas e Pilotos Automáticos.',
     description: 'Conjunto de cabos de grau automotivo com proteção IP68 contra umidade e trepidação, garantindo sinal sem ruídos para monitores e receptores agrícolas.',
