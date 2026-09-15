@@ -72,10 +72,10 @@ export const INITIAL_PRODUCTS: Product[] = [
     categoryLabel: 'Monitores & Consoles',
     brand: 'Agres',
     model: 'IsoView 700',
-    mainImage: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
+    mainImage: '/monitor-isoview.png',
     gallery: [
-      'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80'
+      '/monitor-isoview.png',
+      'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80'
     ],
     shortDescription: 'Console intuitivo touchscreen de 7 polegadas para controle de barras, piloto e aplicação à taxa variável.',
     description: 'O Monitor IsoView 7" integra navegação e controle de taxa variável com uma interface em português extremamente simples e amigável. Ideal para controle de pulverização e fertilização.',
