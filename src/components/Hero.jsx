@@ -1,86 +1,72 @@
 import React from 'react';
-import { MessageCircle, ArrowRight, MapPin, CheckSquare, ShieldCheck, Award } from 'lucide-react';
+import { MessageCircle, ArrowRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section id="inicio" className="bg-slate-100 py-12 sm:py-16 md:py-20 border-b border-slate-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          
-          {/* Left Text Content */}
-          <div className="lg:col-span-7 space-y-5 text-center lg:text-left">
-            
-            {/* Main Headline */}
-            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.2] font-['Outfit']">
-              Tecnologia e precisão, <br className="hidden sm:inline" />
-              <span className="text-[#15803D]">
-                guiando o futuro no campo.
-              </span>
-            </h1>
+    <section id="inicio" className="relative min-h-[75vh] flex items-center justify-center py-16 sm:py-24 border-b border-slate-300 overflow-hidden">
+      {/* High-Definition Agricultural Field Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat filter brightness-95"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=80')`
+        }}
+      />
 
-            {/* Subheadline */}
-            <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-              Soluções em agricultura de precisão para mais eficiência, produtividade e confiabilidade na sua operação.
-            </p>
+      {/* Clean Corporate Backdrop Overlay for Text Legibility */}
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-900/75 to-slate-950/60" />
 
-            {/* Square Buttons Group */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-2">
-              <a
-                href="#solucoes"
-                className="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-bold px-6 py-3.5 rounded-none text-sm sm:text-base transition-all duration-150 border border-slate-900 shadow-xs group"
-              >
-                <span>Conhecer soluções</span>
-                <ArrowRight className="w-4 h-4 text-white transition-transform group-hover:translate-x-1" />
-              </a>
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-6">
+        
+        {/* Main Institutional Headline */}
+        <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-[1.15] font-['Outfit'] max-w-4xl mx-auto">
+          Tecnologia e precisão, <br className="hidden sm:inline" />
+          <span className="text-[#22C55E]">
+            guiando o futuro no campo.
+          </span>
+        </h1>
 
-              <a
-                href="https://wa.me/5567991776857"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2.5 bg-[#15803D] hover:bg-[#166534] text-white font-bold px-6 py-3.5 rounded-none text-sm sm:text-base transition-all duration-150 border border-[#15803D] shadow-xs"
-              >
-                <MessageCircle className="w-5 h-5 fill-white" />
-                <span>Falar com especialista</span>
-              </a>
-            </div>
+        {/* Subheadline */}
+        <p className="text-slate-200 text-base sm:text-lg md:text-xl max-w-3xl mx-auto font-normal leading-relaxed">
+          Soluções em agricultura de precisão para mais eficiência, produtividade e confiabilidade na sua operação.
+        </p>
 
-            {/* Institutional Trust Badges */}
-            <div className="pt-6 border-t border-slate-300 grid grid-cols-3 gap-3 max-w-lg mx-auto lg:mx-0 text-left">
-              <div className="p-3 bg-white border border-slate-200">
-                <span className="block text-[11px] text-slate-500 font-semibold uppercase">Desempenho</span>
-                <span className="text-xs sm:text-sm font-bold text-slate-900">Alta Precisão</span>
-              </div>
-              <div className="p-3 bg-white border border-slate-200">
-                <span className="block text-[11px] text-slate-500 font-semibold uppercase">Atendimento</span>
-                <span className="text-xs sm:text-sm font-bold text-slate-900">Direto no Campo</span>
-              </div>
-              <div className="p-3 bg-white border border-slate-200">
-                <span className="block text-[11px] text-slate-500 font-semibold uppercase">Equipamentos</span>
-                <span className="text-xs sm:text-sm font-bold text-slate-900">Revenda Oficial</span>
-              </div>
-            </div>
+        {/* Square Buttons Group */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-4">
+          <a
+            href="#solucoes"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-100 text-slate-900 font-extrabold px-8 py-4 rounded-none text-sm sm:text-base transition-all duration-150 border border-white shadow-md group"
+          >
+            <span>Conhecer soluções</span>
+            <ArrowRight className="w-4 h-4 text-slate-900 transition-transform group-hover:translate-x-1" />
+          </a>
 
-          </div>
-
-          {/* Right Visual Display Card (Clean Corporate Showcase) */}
-          <div className="lg:col-span-5 relative mt-4 lg:mt-0">
-            <div className="bg-white border border-slate-300 p-3 shadow-md">
-              <div className="relative h-64 sm:h-80 md:h-96 overflow-hidden bg-slate-200 border border-slate-200">
-                <img
-                  src="https://images.unsplash.com/photo-1595246140625-573b715d11dc?auto=format&fit=crop&w=1000&q=80"
-                  alt="AgroVision MS Agricultura de Precisão"
-                  className="w-full h-full object-cover object-center"
-                />
-              </div>
-
-              <div className="mt-3 p-3 bg-slate-50 border border-slate-200 flex items-center justify-between text-xs text-slate-700">
-                <span className="font-bold text-slate-900">AgroVision MS — Agricultura de Precisão</span>
-                <span className="text-[#15803D] font-bold">Rio Brilhante / MS</span>
-              </div>
-            </div>
-          </div>
-
+          <a
+            href="https://wa.me/5567991776857"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#15803D] hover:bg-[#166534] text-white font-extrabold px-8 py-4 rounded-none text-sm sm:text-base transition-all duration-150 border border-[#15803D] shadow-md"
+          >
+            <MessageCircle className="w-5 h-5 fill-white" />
+            <span>Falar com especialista</span>
+          </a>
         </div>
+
+        {/* Institutional Trust Indicators */}
+        <div className="pt-8 border-t border-white/20 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl mx-auto text-center text-white">
+          <div className="p-3 bg-black/40 backdrop-blur-xs border border-white/20">
+            <span className="block text-[11px] text-slate-300 font-semibold uppercase">Desempenho</span>
+            <span className="text-sm font-bold text-[#22C55E]">Alta Precisão</span>
+          </div>
+          <div className="p-3 bg-black/40 backdrop-blur-xs border border-white/20">
+            <span className="block text-[11px] text-slate-300 font-semibold uppercase">Atendimento</span>
+            <span className="text-sm font-bold text-white">Direto no Campo</span>
+          </div>
+          <div className="p-3 bg-black/40 backdrop-blur-xs border border-white/20">
+            <span className="block text-[11px] text-slate-300 font-semibold uppercase">Equipamentos</span>
+            <span className="text-sm font-bold text-[#22C55E]">Revenda Oficial</span>
+          </div>
+        </div>
+
       </div>
     </section>
   );

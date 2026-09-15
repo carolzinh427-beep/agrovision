@@ -11,7 +11,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     mainImage: 'https://images.unsplash.com/photo-1595246140625-573b715d11dc?auto=format&fit=crop&w=800&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1595246140625-573b715d11dc?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1586771107445-d3ca888129ff?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=800&q=80'
     ],
     shortDescription: 'Sistema de direcionamento automático elétrico de alta precisão para tratores, pulverizadores e colhedoras.',
     description: 'O Piloto Automático Elétrico IsoView da Agres proporciona extrema precisão nas operações no campo, reduzindo o amassamento da cultura, otimizando o tempo de trabalho e diminuindo a fadiga do operador.',
@@ -41,9 +41,10 @@ export const INITIAL_PRODUCTS: Product[] = [
     categoryLabel: 'Antenas & Receptores',
     brand: 'Agres',
     model: 'Agronave L1/L2',
-    mainImage: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
+    mainImage: 'https://images.unsplash.com/photo-1586771107445-d3ca888129ff?auto=format&fit=crop&w=800&q=80',
     gallery: [
-      'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1586771107445-d3ca888129ff?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=800&q=80'
     ],
     shortDescription: 'Receptor GNSS multifrequência projetado para operações exigentes de mapeamento e orientação agrícola.',
     description: 'Antena e receptor GNSS integrados de alta sensibilidade para rastreamento de satélites GPS, GLONASS e Galileo, garantindo sinal estável e confiável em condições adversas.',
@@ -71,8 +72,9 @@ export const INITIAL_PRODUCTS: Product[] = [
     categoryLabel: 'Monitores & Consoles',
     brand: 'Agres',
     model: 'IsoView 700',
-    mainImage: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80',
+    mainImage: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
     gallery: [
+      'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80'
     ],
     shortDescription: 'Console intuitivo touchscreen de 7 polegadas para controle de barras, piloto e aplicação à taxa variável.',
@@ -103,7 +105,8 @@ export const INITIAL_PRODUCTS: Product[] = [
     model: 'Greco Sensing Pod',
     mainImage: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80',
     gallery: [
-      'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80'
     ],
     shortDescription: 'Módulo de telemetria e diagnóstico eletrônico para monitoramento em tempo real de implementos agrícolas.',
     description: 'Solução da Greco Agro Tech para leitura contínua de sensores no maquinário, identificação prévia de falhas elétricas/hidráulicas e envio de diagnósticos em campo.',
@@ -132,7 +135,8 @@ export const INITIAL_PRODUCTS: Product[] = [
     model: 'Chicote Master Agres/Greco',
     mainImage: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80',
     gallery: [
-      'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=800&q=80'
     ],
     shortDescription: 'Chicotes blindados e adaptadores reforçados para instalações de GPS, Antenas e Pilotos Automáticos.',
     description: 'Conjunto de cabos de grau automotivo com proteção IP68 contra umidade e trepidação, garantindo sinal sem ruídos para monitores e receptores agrícolas.',
@@ -161,7 +165,8 @@ export const INITIAL_PRODUCTS: Product[] = [
     model: 'RTK Link Radio/4G',
     mainImage: 'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80',
     gallery: [
-      'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80'
     ],
     shortDescription: 'Módulo de transmissão de correção centimétrica para máximo rendimento no plantio e sulcamento.',
     description: 'Equipamento para recepção de sinais de alta precisão RTK/NTRIP via rádio UHF ou telefonia celular 4G, permitindo precisão de 2,5 cm de passada a passada.',
