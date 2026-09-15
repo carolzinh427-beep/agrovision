@@ -41,8 +41,8 @@ export default function Solutions() {
     },
     {
       number: '06',
-      title: 'ATUALIZAÇÃO DE SINAL',
-      description: 'Configuração e suporte para correções e posicionamento.',
+      title: 'MÓDULO DE CORREÇÃO DE SINAL',
+      description: 'Configuração, manutenção e suporte para correções de alta precisão (RTK / GNSS).',
       icon: Signal,
       image: '/modulo-correcao-rtk.png',
     },
