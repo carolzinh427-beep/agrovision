@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Navigation, Clock } from 'lucide-react';
+import { MapPin, Clock } from 'lucide-react';
 
 export default function Location() {
   const cities = [
@@ -19,7 +19,7 @@ export default function Location() {
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
           
-          {/* Left Text (Without top tag) */}
+          {/* Left Text */}
           <div className="lg:col-span-6 space-y-4">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 font-['Outfit'] tracking-tight">
               Atendimento em Rio Brilhante e região — MS
@@ -52,37 +52,41 @@ export default function Location() {
             </div>
           </div>
 
-          {/* Right Location Graphic Card */}
+          {/* Right Location Google Maps Card */}
           <div className="lg:col-span-6">
-            <div className="bg-slate-50 p-5 sm:p-6 border border-slate-300 space-y-4 rounded-none shadow-xs">
-              <div className="flex items-center justify-between pb-3 border-b border-slate-200">
+            <div className="bg-slate-50 p-4 sm:p-5 border border-slate-300 space-y-3 rounded-none shadow-xs">
+              <div className="flex items-center justify-between pb-2.5 border-b border-slate-200">
                 <div className="flex items-center gap-2">
                   <div className="w-2.5 h-2.5 bg-[#15803D]" />
-                  <span className="font-bold text-slate-900 text-sm">Base Operacional AgroVision MS</span>
+                  <span className="font-bold text-slate-900 text-sm">Google Maps — Rio Brilhante / MS</span>
                 </div>
-                <span className="text-xs text-slate-600 font-bold">MS - Brasil</span>
+                <span className="text-xs text-slate-600 font-bold">Base Regional</span>
               </div>
 
-              {/* Location Card Display */}
-              <div className="relative h-48 sm:h-56 bg-white border border-slate-300 overflow-hidden flex items-center justify-center text-center p-6">
-                <div className="space-y-2 max-w-xs">
-                  <Navigation className="w-8 h-8 text-[#15803D] mx-auto" />
-                  <h4 className="font-bold text-slate-900 text-sm">Rio Brilhante e região — MS</h4>
-                  <p className="text-xs text-slate-600">
-                    Suporte técnico presencial em campo em toda a região agrícola.
-                  </p>
-                </div>
+              {/* Embedded Interactive Google Map */}
+              <div className="relative h-64 sm:h-72 w-full bg-slate-200 border border-slate-300 overflow-hidden rounded-none">
+                <iframe
+                  title="Google Maps Rio Brilhante MS"
+                  src="https://maps.google.com/maps?q=Rio%20Brilhante%20-%20MS&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full filter saturate-90"
+                />
               </div>
 
               <div className="flex items-center justify-between text-xs text-slate-600 pt-1">
-                <span>Contato: (67) 99177-6857</span>
+                <span className="font-semibold">Atendimento presencial em campo</span>
                 <a
-                  href="https://wa.me/5567991776857"
+                  href="https://wa.me/5567991776857?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20uma%20visita%20t%C3%A9cnica%20em%20Rio%20Brilhante%20ou%20regi%C3%A3o."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#15803D] font-bold hover:underline"
                 >
-                  Solicitar Visita &rarr;
+                  Solicitar Visita Técnica &rarr;
                 </a>
               </div>
             </div>
