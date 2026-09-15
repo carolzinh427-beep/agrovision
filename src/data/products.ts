@@ -133,8 +133,9 @@ export const INITIAL_PRODUCTS: Product[] = [
     categoryLabel: 'Peças & Acessórios',
     brand: 'AgroVision',
     model: 'Chicote Master Agres/Greco',
-    mainImage: '/kit-ponta-de-cerca-greco.png',
+    mainImage: '/sensores-greco-gr500.png',
     gallery: [
+      '/sensores-greco-gr500.png',
       '/kit-ponta-de-cerca-greco.png',
       '/conector-chicote-01.png',
       '/conector-chicote-02.png',
